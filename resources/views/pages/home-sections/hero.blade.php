@@ -28,122 +28,135 @@
 
             <!-- ================= RIGHT CONTENT ================= -->
             <div class="relative z-30 flex items-center min-h-screen">
-                <div
-                    class="ml-auto w-full lg:w-1/2
-                   px-6 sm:px-8 xl:px-20
-                   text-white text-center lg:text-left
-                   mt-20 lg:mt-28">
+    <div
+        class="ml-auto w-full lg:w-1/2
+               px-6 sm:px-8 xl:px-20
+               text-white text-center lg:text-left
+               mt-20 lg:mt-28">
 
-                    <!-- TOP LINE + ARROWS -->
-                    <div class="flex items-center justify-center lg:justify-start gap-4 mb-6" data-aos="fade-up">
+        <!-- TOP LINE + ARROWS -->
+        <div class="flex items-center justify-center lg:justify-start gap-4 mb-6" data-aos="fade-up">
 
-                        <!-- Decorative arrows -->
-                        <div class="flex gap-2 opacity-40">
-                            <span class="w-3 h-5 bg-white/70 clip-path-arrow"></span>
-                            <span class="w-4 h-5 bg-white/70 clip-path-arrow"></span>
-                            <span class="w-5 h-5 bg-white/70 clip-path-arrow"></span>
-                        </div>
-
-                        <p class="uppercase tracking-[0.35em] text-sm opacity-90 font-inter">
-                            GROWTH PARTNER FOR MODERN BUSINESSES
-                        </p>
-                    </div>
-
-                    <!-- MAIN HEADING (SPLIT) -->
-                    <h1 class="text-3xl sm:text-4xl xl:text-5xl
-                       font-extrabold leading-tight mb-3"
-                        style="font-family:'Montserrat Alternates', sans-serif;" data-aos="fade-up" data-aos-delay="150">
-                        We Don’t Sell Services.
-                    </h1>
-
-                    <h2 class="text-3xl sm:text-4xl xl:text-5xl
-                       font-extrabold leading-tight mb-6"
-                        style="font-family:'Montserrat Alternates', sans-serif;" data-aos="fade-up" data-aos-delay="220">
-                        We Build Growth Engines.
-                    </h2>
-
-                    <!-- DESCRIPTION -->
-                    <p class="text-white/90 leading-relaxed mb-10
-                      max-w-xl mx-auto lg:mx-0 font-inter"
-                        data-aos="fade-up" data-aos-delay="350">
-                        Devobyte designs and manages technology and marketing systems
-                        that generate consistent leads, drive revenue, and create
-                        long-term business impact.
-                    </p>
-
-                    <!-- CTA BUTTONS -->
-                    <div class="flex flex-col sm:flex-row gap-6
-                        justify-center lg:justify-start"
-                        data-aos="fade-up" data-aos-delay="500">
-
-                        <!-- PRIMARY -->
-                        <a href="javascript:void(0)" onclick="openContactPopup()"
-                            class="group relative inline-flex items-center
-                          bg-white text-blue-600
-                          pl-7 pr-[4.25rem] py-5
-                          rounded-full
-                          min-w-[260px]
-                          justify-center sm:justify-start
-                          font-semibold text-sm
-                          transition-all duration-300
-                          hover:bg-blue-600 hover:text-white
-                          font-inter">
-
-                            <span class="whitespace-nowrap">
-                                BOOK A STRATEGY CALL
-                            </span>
-
-                            <span
-                                class="absolute right-0.5 inset-y-0.5
-                               w-14 h-14
-                               bg-blue-600 text-white
-                               rounded-full
-                               flex items-center justify-center
-                               text-lg
-                               transition-all duration-300
-                               group-hover:bg-white
-                               group-hover:text-blue-600
-                               group-hover:scale-105">
-                                ↗
-                            </span>
-                        </a>
-
-                        <!-- SECONDARY -->
-                        <a href="javascript:void(0)" onclick="openContactPopup()"
-                            class="group relative inline-flex items-center
-                          bg-white text-blue-600
-                          pl-7 pr-[4.25rem] py-5
-                          rounded-full
-                          min-w-[200px]
-                          justify-center sm:justify-start
-                          font-semibold text-sm
-                          transition-all duration-300
-                          hover:bg-blue-600 hover:text-white
-                          font-inter">
-
-                            <span class="whitespace-nowrap">
-                                GET QUOTE
-                            </span>
-
-                            <span
-                                class="absolute right-0.5 inset-y-0.5
-                               w-14 h-14
-                               bg-blue-600 text-white
-                               rounded-full
-                               flex items-center justify-center
-                               text-lg
-                               transition-all duration-300
-                               group-hover:bg-white
-                               group-hover:text-blue-600
-                               group-hover:scale-105">
-                                ↗
-                            </span>
-                        </a>
-
-                    </div>
-
-                </div>
+            <!-- Decorative arrows -->
+            <div class="flex gap-2 opacity-40">
+                <span class="w-3 h-5 bg-white/70 clip-path-arrow"></span>
+                <span class="w-4 h-5 bg-white/70 clip-path-arrow"></span>
+                <span class="w-5 h-5 bg-white/70 clip-path-arrow"></span>
             </div>
+
+            <p class="uppercase tracking-[0.35em] text-sm opacity-90 font-inter whitespace-nowrap">
+                GROWTH PARTNER FOR MODERN BUSINESSES
+            </p>
+        </div>
+
+        <!-- MAIN HEADING 1 -->
+        <h1
+            class="text-[28px] sm:text-[34px] md:text-[40px] xl:text-[48px]
+                   font-extrabold leading-tight mb-2
+                   whitespace-nowrap"
+            style="font-family:'Montserrat Alternates', sans-serif;"
+            data-aos="fade-up"
+            data-aos-delay="150">
+            We Don’t Sell Services.
+        </h1>
+
+        <!-- MAIN HEADING 2 -->
+        <h2
+            class="text-[28px] sm:text-[34px] md:text-[40px] xl:text-[48px]
+                   font-extrabold leading-tight mb-6
+                   whitespace-nowrap"
+            style="font-family:'Montserrat Alternates', sans-serif;"
+            data-aos="fade-up"
+            data-aos-delay="220">
+            We Build Growth Engines.
+        </h2>
+
+        <!-- DESCRIPTION -->
+        <p
+            class="text-white/90 leading-relaxed mb-10
+                   max-w-xl mx-auto lg:mx-0 font-inter"
+            data-aos="fade-up"
+            data-aos-delay="350">
+            Devobyte designs and manages technology and marketing systems
+            that generate consistent leads, drive revenue, and create
+            long-term business impact.
+        </p>
+
+        <!-- CTA BUTTONS -->
+        <div
+            class="flex flex-col sm:flex-row gap-6
+                   justify-center lg:justify-start"
+            data-aos="fade-up"
+            data-aos-delay="500">
+
+            <!-- PRIMARY -->
+            <a href="javascript:void(0)" onclick="openContactPopup()"
+               class="group relative inline-flex items-center
+                      bg-white text-blue-600
+                      pl-7 pr-[4.25rem] py-5
+                      rounded-full
+                      min-w-[260px]
+                      justify-center sm:justify-start
+                      font-semibold text-sm
+                      transition-all duration-300
+                      hover:bg-blue-600 hover:text-white
+                      font-inter">
+
+                <span class="whitespace-nowrap">
+                    BOOK A STRATEGY CALL
+                </span>
+
+                <span
+                    class="absolute right-0.5 inset-y-0.5
+                           w-14 h-14
+                           bg-blue-600 text-white
+                           rounded-full
+                           flex items-center justify-center
+                           text-lg
+                           transition-all duration-300
+                           group-hover:bg-white
+                           group-hover:text-blue-600
+                           group-hover:scale-105">
+                    ↗
+                </span>
+            </a>
+
+            <!-- SECONDARY -->
+            <a href="javascript:void(0)" onclick="openContactPopup()"
+               class="group relative inline-flex items-center
+                      bg-white text-blue-600
+                      pl-7 pr-[4.25rem] py-5
+                      rounded-full
+                      min-w-[200px]
+                      justify-center sm:justify-start
+                      font-semibold text-sm
+                      transition-all duration-300
+                      hover:bg-blue-600 hover:text-white
+                      font-inter">
+
+                <span class="whitespace-nowrap">
+                    GET QUOTE
+                </span>
+
+                <span
+                    class="absolute right-0.5 inset-y-0.5
+                           w-14 h-14
+                           bg-blue-600 text-white
+                           rounded-full
+                           flex items-center justify-center
+                           text-lg
+                           transition-all duration-300
+                           group-hover:bg-white
+                           group-hover:text-blue-600
+                           group-hover:scale-105">
+                    ↗
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+</div>
 
         </section>
 

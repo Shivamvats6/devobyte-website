@@ -2,7 +2,7 @@
 
 @section('content')
 
-@section('title', 'About Us – Devobyte')
+@section('title', 'Our Team – Devobyte')
 
 <!-- ================= HERO BANNER ================= -->
 <section class="relative min-h-[420px] flex items-center">
@@ -74,7 +74,7 @@
             <!-- ================= CARD ================= -->
             <div class="team-card group">
                 <div class="image-wrap">
-                    <img src="/assets/images/shivamsharma1.png" alt="Team Member">
+                    <img src="/assets/images/shivam.jpeg" alt="Team Member">
                     <div class="brush-overlay"></div>
                 </div>
 
@@ -113,7 +113,7 @@
             <!-- ================= CARD ================= -->
             <div class="team-card group">
                 <div class="image-wrap">
-                    <img src="/assets/images/our-founder.jpeg" alt="Team Member">
+                    <img src="/assets/images/ankit.jpeg" alt="Team Member">
                     <div class="brush-overlay"></div>
                 </div>
 
@@ -156,9 +156,11 @@
 .image-wrap img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit: cover;
+    object-position: center 20%;
     position:relative;
     z-index:2;
+    background: #f5f5f5; /* optional – empty space clean lage */
 }
 
 /* BRUSH EFFECT */

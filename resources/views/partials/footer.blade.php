@@ -1,5 +1,54 @@
 <!-- ================= FOOTER ================= -->
-<footer class="relative text-white pt-40 pb-10 overflow-hidden">
+
+<!-- ================= NEWSLETTER SUBSCRIBE SECTION ================= -->
+<section class="relative z-30 -mb-1 px-6 mt-1" data-aos="fade-up">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="newsletter-box">
+
+            <!-- CONTENT -->
+            <div class="flex flex-col lg:flex-row items-center justify-end gap-10">
+
+                <!-- RIGHT SIDE CONTENT + FORM -->
+                <div class="w-full lg:w-1/2">
+
+                    <!-- TEXT -->
+                    <h3 class="text-2xl lg:text-3xl font-bold text-white mb-2"
+                        style="font-family:'Montserrat Alternates', sans-serif;">
+                        Subscribe To Our Newsletter!
+                    </h3>
+
+                    <p class="text-white/90 text-sm mb-6">
+                        Get latest updates, offers & marketing tips directly in your inbox.
+                    </p>
+
+                    <!-- FORM -->
+                    <form action="#" method="POST" class="newsletter-form flex w-full max-w-md" aria-label="Newsletter Subscription Form">
+                        @csrf
+
+                        <label for="newsletter-email" class="sr-only">Enter your email address</label>
+
+                        <input id="newsletter-email" type="email" name="email" required
+                               placeholder="Enter Email Address"
+                               class="newsletter-input">
+
+                        <button type="submit" class="newsletter-btn" aria-label="Submit Email">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="relative text-white pt-44 pb-10 overflow-hidden">
 
     <!-- ================= BACKGROUND IMAGE ================= -->
     <div class="absolute inset-0 z-0">
@@ -52,7 +101,7 @@
                                group-hover:bg-white
                                group-hover:text-blue-600
                                group-hover:scale-105">
-                                ↗
+                                <i class="fa-solid fa-paper-plane text-sm"></i>
                             </span>
                         </a>
 
@@ -141,7 +190,7 @@
 
                     <li class="flex gap-3 items-center">
                         <span>✉️</span>
-                        <span>sarffraz.khan@devobyte.com</span>
+                        <span>sarfraz.khan@devobyte.com</span>
                     </li>
                 </ul>
             </div>
@@ -153,7 +202,7 @@
 
         <!-- ================= BOTTOM BAR ================= -->
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70 font-inter">
-            <p>© All Copyright 2025 by Devobyte</p>
+            <p>© All Copyright 2026 by Devobyte</p>
 
             <div class="flex gap-6">
                 <a href="{{ route('terms') }}" class="footer-link">Terms & Conditions</a>
@@ -277,6 +326,122 @@ a span::before {
 .fa-thin,
 .fa-duotone {
     font-family: "Font Awesome 6 Free" !important;
+}
+
+/* ================= NEWSLETTER BOX ================= */
+
+.newsletter-box {
+    background: url('/assets/images/action.png') center/cover no-repeat;
+
+    border-radius: 20px;
+    padding: 40px 60px;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+
+    min-height: 180px;
+
+    /* 🔥 PERFECT HALF OVERLAP EFFECT */
+    transform: translateY(50%);
+}
+
+/* Remove overlay fully */
+.newsletter-box::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* FORM */
+.newsletter-form {
+    background: #ffffff;
+    border-radius: 999px;
+    overflow: hidden;
+    padding: 6px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+.newsletter-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 14px;
+    border-radius: 999px;
+}
+
+.newsletter-btn {
+    width: 48px;
+    height: 48px;
+    background: #2F80FF;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.newsletter-btn:hover {
+    background: #1c6fe3;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ================= RESPONSIVE FIX ================= */
+
+@media (max-width: 768px) {
+    .newsletter-box {
+        padding: 30px 24px;
+        text-align: center;
+        transform: translateY(40%);
+    }
+
+    .newsletter-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.newsletter-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 14px;
+    border-radius: 999px;
+}
+
+.newsletter-btn {
+    width: 48px;
+    height: 48px;
+    background: #2F80FF;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.newsletter-btn:hover {
+    background: #1c6fe3;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-box {
+        padding: 30px 24px;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
 }
 
     </style>

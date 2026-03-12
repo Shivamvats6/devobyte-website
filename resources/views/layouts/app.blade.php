@@ -7,6 +7,10 @@
 
     <title>@yield('title', 'Devobyte Innovators | Digital Solutions & Marketing')</title>
 
+    <!-- ✅ FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.svg') }}">
+
     {{-- GOOGLE FONTS --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +24,11 @@
     {{-- AOS --}}
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 
-    {{-- TAILWIND CDN --}}
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- ✅ VITE ASSETS (AUTO RELOAD ENABLED) --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- TAILWIND CDN (FOR QUICK UTILITIES) --}}
+
 
     @stack('head')
 </head>
@@ -44,6 +51,7 @@
 
     {{-- AOS --}}
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script>
         AOS.init({
             duration: 900,

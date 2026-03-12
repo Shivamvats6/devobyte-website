@@ -843,7 +843,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     @endphp
 
                     @foreach ($faqs as $faq)
-                        <div class="faq-item bg-white border rounded-xl shadow-sm overflow-hidden">
+                        <div class="faq-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
 
                             <!-- QUESTION -->
                             <button type="button"

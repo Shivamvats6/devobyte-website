@@ -1,20 +1,3 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-
-
-@theme {
-    /* =============================
-       DEVOBYTE FONT SYSTEM
-    ============================== */
-
-    /* Headings */
-    --font-heading: 'Montserrat Alternates', sans-serif;
-
-    /* Body / Buttons / Paragraphs */
-    --font-body: 'Inter', sans-serif;
-
-    /* Tailwind default font */
-    --font-sans: var(--font-body);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

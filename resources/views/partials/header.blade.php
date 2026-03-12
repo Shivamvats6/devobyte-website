@@ -2,9 +2,10 @@
 <header class="fixed top-6 left-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="relative flex items-center justify-between
-                    bg-white backdrop-blur-md
-                    rounded-full px-6 py-3 shadow-xl">
+        <div
+            class="relative flex items-center justify-between
+            bg-white backdrop-blur-md
+            rounded-full px-6 py-3 shadow-xl">
 
             {{-- Logo --}}
             <a href="{{ route('home') }}">
@@ -12,7 +13,7 @@
             </a>
 
             {{-- ================= DESKTOP MENU ================= --}}
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700 font-inter">
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700 font-inter relative z-10">
 
                 <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
                     Home
@@ -20,21 +21,25 @@
 
                 {{-- About --}}
                 <div class="relative group">
-                    <a href="{{ route('about') }}" class="nav-link flex items-center gap-1 {{ request()->routeIs('about') ? 'active' : '' }}">
+                    <a href="{{ route('about') }}"
+                        class="nav-link flex items-center gap-1 {{ request()->routeIs('about') ? 'active' : '' }}">
                         About Us
                         <i class="fa-solid fa-chevron-down text-[10px]"></i>
                     </a>
 
-                    <div class="absolute left-0 top-full mt-5 w-52 bg-white rounded-xl
+                    <div
+                        class="absolute left-0 top-full mt-4 w-52 bg-white rounded-xl
                                 border border-gray-100 shadow-xl
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
                                 transition-all duration-200">
 
-                        <a href="{{ route('our-team') }}" class="block px-5 py-3 text-sm hover:bg-blue-50 hover:text-blue-600 rounded-xl">
+                        <a href="{{ route('our-team') }}"
+                            class="block px-5 py-3 text-sm hover:bg-blue-50 hover:text-blue-600 rounded-xl">
                             Our Team
                         </a>
 
-                        <a href="#" class="block px-5 py-3 text-sm hover:bg-blue-50 hover:text-blue-600 rounded-xl">
+                        <a href="{{ route('gallery') }}"
+                            class="block px-5 py-3 text-sm hover:bg-blue-50 hover:text-blue-600 rounded-xl">
                             Gallery
                         </a>
                     </div>
@@ -42,13 +47,15 @@
 
                 {{-- Services --}}
                 <div class="relative group">
-                    <a href="{{ route('our-services') }}" class="nav-link flex items-center gap-1 {{ request()->routeIs('our-services') ? 'active' : '' }}">
+                    <a href="{{ route('our-services') }}"
+                        class="nav-link flex items-center gap-1 {{ request()->routeIs('our-services') ? 'active' : '' }}">
                         Services
                         <i class="fa-solid fa-chevron-down text-[10px]"></i>
                     </a>
 
                     {{-- Mega Menu --}}
-                    <div class="absolute left-1/2 top-full mt-5 w-[900px] max-w-[95vw]
+                    <div
+                        class="absolute left-1/2 top-full mt-4 w-[950px] max-w-[95vw]
                                 -translate-x-1/2 bg-white rounded-3xl
                                 border border-gray-100 shadow-2xl
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
@@ -60,25 +67,46 @@
                             <div>
                                 <h4 class="text-blue-600 font-bold mb-4 text-base font-montserrat">IT Services</h4>
                                 <ul class="space-y-3 text-sm">
-                                    <li><a href="{{ route('web-development') }}" class="service-item"><i class="fa-solid fa-globe"></i> Web App Development</a></li>
-                                    <li><a href="{{ route('mobile-development') }}" class="service-item"><i class="fa-solid fa-mobile-screen-button"></i> Mobile App Development</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-solid fa-desktop"></i> Conversion-Focused Websites</a></li>
-                                    <li><a href="{{ route('custom_solution') }}" class="service-item"><i class="fa-solid fa-gears"></i> Custom Software Solutions</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-solid fa-robot"></i> AI Chatbots & Assistants</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-solid fa-bolt"></i> AI Automation & Workflows</a></li>
+                                    <li><a href="{{ route('web-development') }}" class="service-item"><i
+                                                class="fa-solid fa-globe"></i> Web App Development</a></li>
+                                    <li><a href="{{ route('mobile-development') }}" class="service-item"><i
+                                                class="fa-solid fa-mobile-screen-button"></i> Mobile App Development</a>
+                                    </li>
+                                    <li><a href="#" class="service-item"><i class="fa-solid fa-desktop"></i>
+                                            Conversion-Focused Websites</a></li>
+                                    <li><a href="{{ route('custom_solution') }}" class="service-item"><i
+                                                class="fa-solid fa-gears"></i> Custom Software Solutions</a></li>
+                                    <li><a href="{{ route('ai_chatbots') }}" class="service-item"><i
+                                                class="fa-solid fa-robot"></i> AI Chatbots & Assistants</a></li>
+                                    <li><a href="#" class="service-item"><i class="fa-solid fa-bolt"></i> AI
+                                            Automation</a></li>
                                 </ul>
                             </div>
 
                             {{-- SOCIAL --}}
                             <div>
-                                <h4 class="text-blue-600 font-bold mb-4 text-base font-montserrat">Social Media Marketing</h4>
+                                <h4 class="text-blue-600 font-bold mb-4 text-base font-montserrat">Social Media
+                                    Marketing</h4>
                                 <ul class="space-y-3 text-sm">
-                                    <li><a href="{{ route('instagram') }}" class="service-item"><i class="fa-brands fa-instagram"></i> Instagram Marketing</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-brands fa-facebook"></i> Facebook Marketing</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-brands fa-youtube"></i> YouTube Marketing</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-brands fa-twitter"></i> Twitter Marketing</a></li>
-                                    <li><a href="{{ route('linkedin') }}" class="service-item"><i class="fa-brands fa-linkedin"></i> LinkedIn Marketing</a></li>
-                                    <li><a href="#" class="service-item"><i class="fa-brands fa-amazon"></i> Amazon Marketing</a></li>
+
+                                    {{-- ✅ MAIN PAGE LINK ADDED --}}
+                                    <li>
+                                        <a href="{{ route('social-media-marketing') }}"
+                                            class="service-item font-semibold text-blue-600">
+                                            <i class="fa-solid fa-bullhorn"></i> All Social Media Services
+                                        </a>
+                                    </li>
+
+                                    <li><a href="{{ route('instagram') }}" class="service-item"><i
+                                                class="fa-brands fa-instagram"></i> Instagram Marketing</a></li>
+                                    <li><a href="#" class="service-item"><i class="fa-brands fa-facebook"></i>
+                                            Facebook Marketing</a></li>
+                                    <li><a href="{{ route('youtube') }}" class="service-item"><i
+                                                class="fa-brands fa-youtube"></i> YouTube Marketing</a></li>
+                                    <li><a href="#" class="service-item"><i class="fa-brands fa-twitter"></i>
+                                            Twitter Marketing</a></li>
+                                    <li><a href="{{ route('linkedin') }}" class="service-item"><i
+                                                class="fa-brands fa-linkedin"></i> LinkedIn Marketing</a></li>
                                 </ul>
                             </div>
 
@@ -86,10 +114,14 @@
                             <div>
                                 <h4 class="text-blue-600 font-bold mb-4 text-base font-montserrat">Marketing</h4>
                                 <ul class="space-y-3 text-sm">
-                                    <li><a href="{{ route('seo') }}" class="service-item"><i class="fa-solid fa-magnifying-glass"></i> SEO</a></li>
-                                    <li><a href="{{ route('lead_generation') }}" class="service-item"><i class="fa-solid fa-bullseye"></i> Lead Generation</a></li>
-                                    <li><a href="{{ route('influencer') }}" class="service-item"><i class="fa-solid fa-user-group"></i> Influencer Marketing</a></li>
-                                    <li><a href="{{ route('email') }}" class="service-item"><i class="fa-solid fa-envelope"></i> Email Marketing</a></li>
+                                    <li><a href="{{ route('seo') }}" class="service-item"><i
+                                                class="fa-solid fa-magnifying-glass"></i> SEO</a></li>
+                                    <li><a href="{{ route('lead_generation') }}" class="service-item"><i
+                                                class="fa-solid fa-bullseye"></i> Lead Generation</a></li>
+                                    <li><a href="{{ route('influencer') }}" class="service-item"><i
+                                                class="fa-solid fa-user-group"></i> Influencer Marketing</a></li>
+                                    <li><a href="{{ route('email') }}" class="service-item"><i
+                                                class="fa-solid fa-envelope"></i> Email Marketing</a></li>
                                 </ul>
                             </div>
 
@@ -98,15 +130,15 @@
                 </div>
 
                 <a href="{{ route('industry') }}" class="nav-link">Industries</a>
-                <a href="#" class="nav-link">Case Studies</a>
-                <a href="#" class="nav-link">Blog</a>
-                <a href="#" class="nav-link">Careers</a>
+                <a href="{{ route('case-study') }}" class="nav-link">Case Studies</a>
+                <a href="{{ route('blog.index') }}" class="nav-link">Blog</a>
+                <a href="{{ route('careers') }}" class="nav-link">Careers</a>
 
             </nav>
 
             {{-- CTA --}}
             <a href="{{ route('contact') }}"
-               class="hidden lg:flex bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-semibold items-center gap-2 transition">
+                class="hidden lg:flex bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-semibold items-center gap-2 transition">
                 Contact Us →
             </a>
 
@@ -123,41 +155,25 @@
             <a href="{{ route('home') }}" class="block font-medium">Home</a>
             <a href="{{ route('about') }}" class="block font-medium">About Us</a>
 
-            {{-- Mobile Services Accordion --}}
-            <div>
-                <button class="w-full flex justify-between items-center font-medium" onclick="toggleSubMenu()">
-                    Services
-                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                </button>
+            <a href="{{ route('social-media-marketing') }}" class="block font-medium text-blue-600">
+                Social Media Marketing
+            </a>
 
-                <div id="mobileSubMenu" class="hidden mt-3 pl-4 space-y-2 text-sm">
-                    <a href="{{ route('web-development') }}" class="block">Web App Development</a>
-                    <a href="{{ route('mobile-development') }}" class="block">Mobile App Development</a>
-                    <a href="{{ route('custom_solution') }}" class="block">Custom Software</a>
-                    <a href="{{ route('seo') }}" class="block">SEO</a>
-                    <a href="{{ route('influencer') }}" class="block">Influencer Marketing</a>
-                </div>
-            </div>
-
-            <a href="#" class="block font-medium">Industries</a>
-            <a href="#" class="block font-medium">Case Studies</a>
-            <a href="#" class="block font-medium">Blog</a>
-            <a href="#" class="block font-medium">Careers</a>
-
-            <a href="{{ route('contact') }}"
-               class="inline-block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full">
+            <a href="{{ route('contact') }}" class="inline-block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full">
                 Contact Us
             </a>
         </div>
 
     </div>
 </header>
+
 <style>
     .nav-link {
         position: relative;
-        padding: 4px 2px;
+        padding: 6px 4px 10px;
         color: #374151;
         transition: color 0.3s ease;
+        display: inline-block;
     }
 
     .nav-link:hover {
@@ -168,17 +184,18 @@
         content: "";
         position: absolute;
         left: 0;
+        right: 0;
         bottom: 0;
-        width: 0%;
         height: 2px;
-        background-color: #2563EB;
-        transition: width 0.3s ease;
-        border-radius: 10px;
+        background: linear-gradient(90deg, #2563EB, #60A5FA);
+        transform: scaleX(0);
+        transition: transform .3s ease;
+        border-radius: 999px;
     }
 
     .nav-link:hover::after,
     .nav-link.active::after {
-        width: 100%;
+        transform: scaleX(1);
     }
 
     .nav-link.active {
@@ -190,14 +207,13 @@
         align-items: center;
         gap: 10px;
         color: #374151;
-        transition: all 0.25s ease;
+        transition: .25s;
     }
 
     .service-item i {
         color: #2563EB;
         width: 18px;
         text-align: center;
-        flex-shrink: 0;
     }
 
     .service-item:hover {
@@ -205,16 +221,12 @@
         padding-left: 6px;
     }
 </style>
+
 <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    menuBtn.addEventListener('click', function () {
+    menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
-
-    function toggleSubMenu() {
-        const sub = document.getElementById('mobileSubMenu');
-        sub.classList.toggle('hidden');
-    }
 </script>
